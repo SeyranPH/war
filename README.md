@@ -44,7 +44,7 @@ Every game should be stored in a database.
 Every game result should be stored in a database.
 
 **Game Logic**
-Every tank needs 4 people to be useful
-Every gun need 1 man to be useful
-Tanks should be stronger then 4 man with guns
-The winner is the one with more cumulative attack and health points
+- Every tank needs 4 people to be useful
+- Every gun need 1 man to be useful
+- Tanks should be stronger then 4 man with guns
+- The winner is the one with more cumulative attack and health points
