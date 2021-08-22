@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "df27bba5-2bc4-4108-9245-c1c04e163458",
+		"name": "task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create game",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-ko-organization-id",
+						"value": "69bca0e2-3aae-4ca5-9968-ea33f187938d",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstArmy\": {\n        \"soldier\": {\n            \"health\": 123,\n            \"attack\": 23,\n            \"amount\": 123\n        },\n        \"gun\": {\n            \"health\": 123,\n            \"attack\": 23,\n            \"amount\": 123\n        },\n        \"tank\": {\n            \"health\": 12312,\n            \"attack\": 231221,\n            \"amount\": 12312\n        }\n    },\n    \"secondArmy\": {\n        \"soldier\": {\n            \"health\": 123,\n            \"attack\": 23,\n            \"amount\": 123\n        },\n        \"gun\": {\n            \"health\": 123,\n            \"attack\": 23,\n            \"amount\": 123\n        },\n        \"tank\": {\n            \"health\": 12312,\n            \"attack\": 231221,\n            \"amount\": 12312\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/game",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"game"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "execute game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/game/start/61227c2bfc6f3d001496c96a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"game",
+						"start",
+						"61227c2bfc6f3d001496c96a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get games",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/game?limit=4&skip=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"game"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "4"
+						},
+						{
+							"key": "skip",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
